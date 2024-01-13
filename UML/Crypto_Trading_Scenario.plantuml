@@ -1,0 +1,28 @@
+@startuml
+skinparam monochrome true
+
+[*] --> Idle
+Idle -down-> AnalyzingMarket : Analyze Market
+AnalyzingMarket -down-> PlacingOrder : Decide to Trade
+AnalyzingMarket -right-> Idle : No Trading Opportunity
+PlacingOrder -down-> OrderPlaced : Place Order
+OrderPlaced -down-> MonitoringTrade : Order Executed
+OrderPlaced -left-> AnalyzingMarket : Order Failed
+MonitoringTrade -down-> TradeClosed : Close Position
+MonitoringTrade -right-> AdjustingTrade : Adjust Position
+AdjustingTrade -left-> MonitoringTrade : Position Adjusted
+TradeClosed -down-> [*]
+
+state MonitoringTrade {
+    state "In Profit" as InProfit
+    state "At Break-Even" as AtBreakEven
+    state "In Loss" as InLoss
+
+    MonitoringTrade : Entry Price = X
+    MonitoringTrade : Current Price = Y
+    MonitoringTrade --> InProfit : Y > X + Threshold
+    MonitoringTrade --> AtBreakEven : X <= Y <= X + Threshold
+    MonitoringTrade --> InLoss : Y < X
+}
+
+@enduml
