@@ -5,6 +5,25 @@ Here is the Finance GPT Market Prediction Hotkey Command Menu for your reference
 ## 📈 Stock Prediction
 
 * 🔮 W: Predict future price of a specific stock using technical analysis.
+## W  "EthCAD" "Week 3 2024" "in text code box"
+Stock Prediction Request
+
+Command: `🔮 W`
+Description: Predict future price of EthCAD (Ethereum/Canadian Dollar) using technical analysis.
+Crypto Pair: EthCAD (Ethereum/Canadian Dollar)
+Prediction Date: Week 3, 2024
+
+Details:
+- Objective: Predict the price of EthCAD for Week 3 of 2024, focusing on chart patterns, indicators, and market trends.
+- Data Required: Historical trading data of EthCAD up to the most recent date.
+- Analysis Tools: Utilize tools such as moving averages, RSI, MACD, candlestick patterns, and other relevant technical indicators for in-depth analysis.
+
+Notes:
+- The analysis will consider factors like market volatility, trading volumes, and recent price movements.
+- It aims to provide insights into potential bullish or bearish trends for EthCAD during the specified week.
+- This prediction should be used as a guide and not as definitive financial advice.
+
+
 * 🏦 A: Compare predicted future prices of multiple stocks.
 * 🕵️ S: Deep analysis of a stock's potential future performance based on historical data.
 * 📉 D: Assess downside risks and potential drop in a stock's future price.
